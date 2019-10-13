@@ -1,5 +1,5 @@
 <html>
-<body background = "https://techcrunch.com/wp-content/uploads/2019/01/IMG_20181016_092551.jpg?w=730&crop=1">
+<body>
 <h1 align="center"><i> <font color="red">Welcome to Vansh Rai Saini's website</font></i>
 </h1> 
 <marquee>This is my portfolio</marquee>
