@@ -1,6 +1,6 @@
 <html>
 <body background = "https://techcrunch.com/wp-content/uploads/2019/01/IMG_20181016_092551.jpg?w=730&crop=1">
-<h1 align="center"><i> Welcome to Vansh Rai Saini's website</i>
+<h1 align="center"><i> <font color="red">Welcome to Vansh Rai Saini's website</font></i>
 </h1> 
 <marquee>This is my portfolio</marquee>
 <img src = "https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
