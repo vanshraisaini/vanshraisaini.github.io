@@ -76,12 +76,17 @@ a:hover {
 
 
 body {
-  background-color: whitesmoke;
+  background-color: 	rgb(42,42,42);
 }
+/* td1{
+  background-color: coral;
+} */
 td{
-  background-color: white;
+  background-color: 	rgb(40,40,40);
 }
+/* td, */
 th,
+/* tr{background-color: coral;} */
 tr,
 p,
 a {
@@ -89,14 +94,27 @@ a {
   font-size: 20px /* 14 */
 }
 
+/* table{
+  background-color: coral;
+  width:"100%";
+  align="center";
+  border="1";
+  cellspacing="0";
+  cellpadding="20";
+} */
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 20px; /* 14 */
 }
 
 heading {
+  /* width: 100%; */
+  /* margin:0; */
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 28px; /* 22 */
+  /* background-color: #ffffd0; */
+  width: 99%; 
+  height: 8px;
 }
 
 papertitle {
@@ -111,8 +129,8 @@ name {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 240px;
+  height: 240px;
   position: relative;
 }
 
@@ -133,4 +151,11 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+#colorstrip{
+  width: 99%; height: 8px;
+  border-style: solid;
+  border-color: white;
+  background-color: rgb(242, 183, 1);
 }
