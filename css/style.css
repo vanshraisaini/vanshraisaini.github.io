@@ -94,8 +94,10 @@ font-size:14px;
 
 /* =============================== header ===================================== */
 .header{
-background: url(../img/cute_robot.png) no-repeat center fixed;
-    -webkit-background-size: cover;
+/* background: url(../img/cute_robot.png) no-repeat center fixed;
+    -webkit-background-size: cover; */
+background: url(../img/cute_robot.gif) no-repeat center fixed;
+-webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
