@@ -299,12 +299,14 @@
                   <li><span>/</span></li>
                   <li><a class="btn btn-link linear" href="#" data-group="wexp">Work Experience</a></li> 
                   <li><span>/</span></li>
+                  <li><a class="btn btn-link linear" href="#" data-group="slam">SLAM</a></li>
+                  <li><span>/</span></li> 
                   <li><a class="btn btn-link linear" href="#" data-group="deep">Deep Learning</a></li> 
                   <li><span>/</span></li>
                   <li><a class="btn btn-link linear" href="#" data-group="cv">Computer Vision</a></li> 
                   <li><span>/</span></li>
                   <li><a class="btn btn-link linear" href="#" data-group="robo">Robotics</a></li>
-                  <li><span>/</span></li> 
+                  <li><span>/</span></li>
                   <li><a class="btn btn-link linear" href="#" data-group="mp">Motion Planning</a></li>
                 </ul>
              
@@ -316,7 +318,7 @@
 
 
             <!-- - Real Time Vehicle Recognition and Automatic Number Plate Recognition  (CV)    (fig done) -->
-            <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "robo", "mp", "wexp"]'>
+            <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "robo", "wexp", "mp"]'>
               <div class="folio-img">
                   <div class="portfolio-item ">
                       <div class="thumbnail">
@@ -336,6 +338,49 @@
                   </div>
               </div>
           </div>
+          <!-- - Real Time Vehicle Recognition and Automatic Number Plate Recognition  (CV)    (fig done) -->
+          <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "slam", "cv"]'>
+            <div class="folio-img">
+                <div class="portfolio-item ">
+                    <div class="thumbnail">
+                        <div class="thumb-img">
+                            <div class="link-attr">
+                                <a href="images/stereoVo.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Stereo VO" class="link-search animated linear"><i class="fa fa-search"></i></a>
+                                <a href="https://github.com/VaidehiSom/StereoVO" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
+                            </div>
+                            <img class="linear img-portfolio img-responsive" src="images/stereoVo.gif" alt="Stereo VO">
+                            
+                            <div class="folio-caption">
+                                <i class="fa fa-caret-up"></i>
+                                    <p>Stereo VO</p>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+
+        <!-- - Real Time Vehicle Recognition and Automatic Number Plate Recognition  (CV)    (fig done) -->
+        <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "slam", "cv"]'>
+            <div class="folio-img">
+                <div class="portfolio-item ">
+                    <div class="thumbnail">
+                        <div class="thumb-img">
+                            <div class="link-attr">
+                                <a href="images/BA.png" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="BA using ceres" class="link-search animated linear"><i class="fa fa-search"></i></a>
+                                <a href="https://github.com/VaidehiSom/BundleAdjustment_using_Ceres" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
+                            </div>
+                            <img class="linear img-portfolio img-responsive" src="images/BA.png" alt="BA using ceres">
+                            
+                            <div class="folio-caption">
+                                <i class="fa fa-caret-up"></i>
+                                    <p>BA using ceres</p>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
 
           <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "robo", "deep", "mp"]'>
             <div class="folio-img">
@@ -425,7 +470,7 @@
         </div>
 
                   <!-- - Visual Question Answering using Semantic Attention    (Deep, CV)  (fig done) -->
-                  <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "robo", "mp"]'>
+                  <div class="col-xs-12 col-sm-3 col-md-3 box" data-groups='["all", "robo", "slam", "mp"]'>
                     <div class="folio-img">
                         <div class="portfolio-item ">
                             <div class="thumbnail">
@@ -609,6 +654,41 @@
               <div class="panel-body ">
                 
                 <h4>
+                    <strong><a href="https://github.com/VaidehiSom/GestureRecognition">Gesture Recognition controlled Robotic Arm</a></strong> | Deep Learning, Computer Vision, ROS
+                </h4>
+                <!-- <h6>
+                  <div class="right"> <small> May ’20 - Jul ’20 </small></div>
+                  </h6>
+                <br> -->
+                <div class="about-content">  
+                      <UL>
+                        <LI>Implemented ResNet, non-max suppression, huber loss, and detected hand landmarks Video/Report
+                            <LI>Generated data of 25k images, performed data augmentation to obtain 98% accuracy with loss less than 1
+                        <LI>Detected key-points from video input using Intel-RealSense Camera, were used to define various gestures
+                        <LI>Simulated robotic arm using ROS and Gazebo to perform pick up tasks. Enhanced arm movements using gesture inputs
+                      </UL>
+                  </div>
+                  <br>
+
+                  <h4>
+                    <strong><a href="https://github.com/VaidehiSom/StereoVO">Stereo Visual Odometry</a></strong> | Geometric Computer Vision, C++, Ceres, Kitty
+                </h4>
+                <!-- <h6>
+                  <div class="right"> <small> May ’20 - Jul ’20 </small></div>
+                  </h6>
+                <br> -->
+                <div class="about-content">  
+                      <UL>
+                        <LI> Implemented Stereo Visual Odometry for stereo images to find 3D locations of keypoints in those images
+                        <LI> Used GFTT for feature detection and triangulation for 3D point location
+                        <LI> Implemented direct method and optical flow for pose and feature estimation during feature tracking
+                        <LI> Implemented Bundle Adjustment for backend optimization
+                      </UL>
+                  </div>
+                  <br>
+
+
+                <h4>
                   <strong><a href="https://github.com/VaidehiSom/Trajectory_Prediction_and_Dynamic_Obtacle_Avoidance_for_SDC">Trajectory prediction and Dynamic Obstacle avoidance for SDC</a></strong> | PINN, LSTM, Deep Learning
               </h4>
               <div class="about-content">  
@@ -621,21 +701,7 @@
                 <br>
                 
                 
-                <h4>
-                    <strong><a href="https://github.com/VaidehiSom/GestureRecognition">Gesture Recognition controlled Robotic Arm</a></strong> | Deep Learning, Computer Vision, ROS
-                </h4>
-                <!-- <h6>
-                  <div class="right"> <small> May ’20 - Jul ’20 </small></div>
-                  </h6>
-                <br> -->
-                <div class="about-content">  
-                      <UL>
-                        <LI> Implemented CNN, non-max suppression, cross-entropy loss, and detected hand landmarks
-                          <LI>  Detected key-points using Intel-RealSense Camera, were used to define various gestures
-                            <LI> Simulated robotic arm using ROS and Gazebo to perform pick up tasks. Enhanced arm movements using gesture inputs
-                      </UL>
-                  </div>
-                  <br>
+                
 
                   <h4>
                     <strong><a href="https://github.com/VaidehiSom/MobileRobot_Simulation_and_SLAM">Mobile Robot: Simulation and SLAM</a></strong> | ROS Navigation stack, C++, AMCL, EKF, Gazebo
@@ -645,18 +711,6 @@
                         <LI> Simulated ball chasing robot, detection via colors. Designed URDF model and arena
                           <LI>  Implemented localization using AMCL, gmapping for 2D and RTABMap for 3D mapping
                             <LI> Deployed SLAM and Navigation using Dijkstra algorithm and simulated pick and place operation
-                      </UL>
-                  </div>
-                  <br>
-
-                  <h4>
-                    <strong><a href="https://github.com/VaidehiSom/RoboticArm">Robotic Arm 6 dof</a></strong>
-                  </h4>
-                  <div class="about-content">
-                      <UL>
-                        <LI> Developed and programmed 6 dof Robotic arm for 2 kgs payload
-                        <LI>  Implemented forward and inverse kinematics executed by micro controllers for position control of DC motors
-                        <LI>  Programmed motion planning. Modifiable to perform pick/place using different end effectors
                       </UL>
                   </div>
                   <br>
@@ -701,6 +755,18 @@
            <div class="row panel-default">
             <div class="col-md-10  col-md-offset-1">
               <div class="panel-body">
+
+                <h4>
+                    <strong><a href="https://github.com/VaidehiSom/RoboticArm">Robotic Arm 6 dof</a></strong>
+                  </h4>
+                  <div class="about-content">
+                      <UL>
+                        <LI> Developed and programmed 6 dof Robotic arm for 2 kgs payload
+                        <LI>  Implemented forward and inverse kinematics executed by micro controllers for position control of DC motors
+                        <LI>  Programmed motion planning. Modifiable to perform pick/place using different end effectors
+                      </UL>
+                  </div>
+                  <br>
 
                 <h4>
                   <strong><a href="https://github.com/VaidehiSom/CombatRobot">Combat Robot</a></strong>
