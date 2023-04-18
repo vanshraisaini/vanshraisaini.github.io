@@ -258,6 +258,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
             _this.modal_arrows.css('display', 'block');
           }
           return _this.resize(img.width);
+          // return _this;
         };
         img.onerror = function() {
           return _this.error('Failed to load image: ' + src);
