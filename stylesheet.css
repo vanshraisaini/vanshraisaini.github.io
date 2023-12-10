@@ -135,6 +135,7 @@ name {
   width: 240px;
   height: 240px;
   position: relative;
+  color:#1772d0 
 }
 
 .two {
@@ -150,6 +151,14 @@ name {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
+}
+
+.col-md-blue {
+  background-color: blue; /* Change this to your desired blue color */
+}
+
+.bg-blue {
+  background-color: blue; /* Change this to your desired blue color */
 }
 
 span.highlight {
