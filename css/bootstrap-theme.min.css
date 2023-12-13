@@ -5,11 +5,11 @@
 .main-about .btn-clear:hover,
 .main-caption .btn-clear:hover
  {
-background-color: #f24971;
+background-color: #3498db;
 }
 
 .border-color, .navbar-nav > li.current > a, .navbar-nav > li > a:hover, .link-attr a:hover, .main-about .btn-clear:hover, .main-caption .btn-clear:hover{
-border-color:#f24971;
+border-color:#3498db;
 }
 .bg-black, .navbar-inverse{
  background-color:#1d2127;
