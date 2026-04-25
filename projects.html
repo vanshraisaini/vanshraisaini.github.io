@@ -1,518 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <title>Vansh - My Home Page</title>
+    <meta name="description" content="All Projects - Vansh Rai Saini's Portfolio">
+    <meta name="author" content="Vansh Rai Saini">
+    <title>Projects - Vansh Rai Saini</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
     <link rel="icon" type="image/jpeg" href="images/V_logo.jpg">
-    <!-- Add custom CSS here -->
-    
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/ekko-lightbox.css" rel="stylesheet">
-    <link href="css/flexslider.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Modern CSS -->
+    <link href="css/modern.css" rel="stylesheet">
+
     <style>
-        hr {
-            border: none; /* Remove the default border */
-            height: 5px; /* Set the desired thickness */
-            background-color: darkgray; /* Line color */
-            margin: 20px 0; /* Spacing around the line */
+        .project-detail-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-detail-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .project-detail-header img {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+        }
+
+        .project-detail-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-item strong {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .project-detail-header {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-  </head>
+</head>
 
-  <body>
-  <div id="boxWrapp">
-    <div class="main-nav clearfix">
-      <!-- navbar -->
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavCol">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#about"><img src="images/V_logo_without_bg.png" width = "60"></a>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" style="padding: 0 2rem;">
+            <a class="navbar-brand" href="index.html">Vansh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#featured" class="nav-link">Featured</a></li>
+                    <li><a href="#projects" class="nav-link">All Projects</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="NavCol">
-         <ul class="nav navbar-nav navbar-right">
-           
-            <li class="current"><a href="#about" class="linear">Home</a></li>
-            <li><a href="#AMR" class="linear">Perception and SLAM</a></li>
-            <li><a href="#Publications" class="linear">RL</a></li>
-            <!-- <li><a href="#Internships" class="linear">Internships</a></li> -->
-            <li><a href="#WeedingRobot" class="linear">CV</a></li>
-            <li><a href="#Quadruped" class="linear">Quadruped</a></li>
-            <!-- <li><a href="#Avocations" class="linear">Avocations</a></li> -->
-            <li><a href="#contact" class="linear">Contact</a></li>
-          </ul>
-        
-         
-        </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
     </nav>
-      
-    </div>
-    <!-- Full Page Image Header Area -->
-    <div id="about" class="header">
 
-    <div class="maskHeader"></div>
-    <div class="main-caption">
-            <!-- slider -->
-    <div id="flex-head" class="flexslider">
-        <ul class="slides">
-            <li>
-                <h1>Hello! I am Vansh</h1>    
-                <h2>Welcome to my Portfolio</h2>
-            </li>
-            <li>
-                <h1>I am a Robotics Engineer at Unbox Robotics</h1>    
-                <h2>Passionate about solving problems and learning new things in life</h2>
-            </li>
-            <li>
-                <h1>My motto in life</h1>    
-                <h2>Get 1% better everyday</h2>
-            </li>
-        </ul>
-    </div> 
-    <!-- end slider --> 
-        <a href="#AMR" class="btn btnAbout btn-clear border-secondary color-secondary btn-lg">Checkout Projects</a>
-    </div><!--  end main caption -->
-            
-    </div>
-    <!-- end header -->
-    <!-- /Full Page Image Header Area -->
-
-    
-    <!-- content -->
-    <div id="AMR" class="page">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10  col-md-offset-1">
-            <div class="build title-page">
-                <h2 class="text-center">Autonomous Mobile Robot for Exploration</h2>   
-                <div class="line-title bg-primary"></div>
-            </div>
-           </div><!-- end col -->
-        </div><!-- end row -->
-    
-        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="build main-about">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="folio-img">
-                                <div class="portfolio-item ">
-                                    <div class="thumbnail">
-                                        <div class="thumb-img">
-                                            <div class="link-attr">
-                                                <a href="project_videos/exploration_with_SLAM.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Quadruped" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                                <a href="https://drive.google.com/file/d/1DD0H-BVEMmdUuLSpQfhHepFC0PGzrcRA/view?usp=drive_link" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                            </div>
-                                            <img class="linear img-portfolio img-responsive" src="project_videos/exploration_with_SLAM.gif" alt="AMR">
-                                            
-                                            <div class="folio-caption">
-                                                <i class="fa fa-caret-up"></i>
-                                                    <p>SLAM and AMCL</p>
-                                            </div>
-                                        </div>
-                                    </div>                  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="about-content">
-                                <br>
-                                    <ul>
-                                        <li><h4><b>Pose Graph Optimization for SLAM and AMCL Localization</b></h4>
-                                        Leveraging a 2D LiDAR sensor in simulation, I developed and fine-tuned a robust pose graph optimization technique for SLAM. This approach ensures accurate mapping while simultaneously utilizing AMCL (Adaptive Monte Carlo Localization) to precisely localize the mobile robot within its environment. Together, these techniques enhance the robot’s ability to navigate dynamic and unknown spaces..</li>
-                                    </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="about-content">
-                                <br>
-                                <br>
-                                <ul>
-                                    <li><h4><b>Visual SLAM and Point Cloud Generation</b></h4>
-                                    To expand the robot's capabilities, I implemented Visual SLAM using RTAB-MAP, enabling it to perceive its surroundings through a camera. This process not only allowed the robot to localize itself in real-time but also generated high-quality point cloud data for detailed 3D environmental mapping.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5">
-                            <div class="folio-img">
-                                <div class="portfolio-item ">
-                                    <div class="thumbnail">
-                                        <div class="thumb-img">
-                                            <div class="link-attr">
-                                                <a href="project_videos/point_cloud_generation.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Quadruped" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                            <a href="https://drive.google.com/file/d/1I6OQ4_POMecz628fAwv89gMY38H4g3_7/view?usp=drive_linkd" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                            </div>
-                                            <img class="linear img-portfolio img-responsive" src="project_videos/point_cloud_generation.gif" alt="AMR">
-                                            
-                                            <div class="folio-caption">
-                                                <i class="fa fa-caret-up"></i>
-                                                    <p>Point Cloud Generation</p>
-                                            </div>
-                                        </div>
-                                    </div>                  
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="folio-img">
-                                <div class="portfolio-item ">
-                                    <div class="thumbnail">
-                                        <div class="thumb-img">
-                                            <div class="link-attr">
-                                                <a href="project_videos/exploration.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Quadruped" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                            <a href="https://drive.google.com/file/d/1F3Ko3va4V4-6djAyEqrH7wRaoAFRDF6h/view?usp=drive_link" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                            </div>
-                                            <img class="linear img-portfolio img-responsive" src="project_videos/exploration.gif" alt="AMR">
-                                            
-                                            <div class="folio-caption">
-                                                <i class="fa fa-caret-up"></i>
-                                                    <p>Exploration</p>
-                                            </div>
-                                        </div>
-                                    </div>                  
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="about-content">
-                                <ul>
-                                    <br>
-                                    <br>
-                                    <li><h4><b>Frontier-Based Exploration for Autonomous Mapping</b></h4>
-                                        For autonomous exploration, I developed a frontier-based exploration algorithm integrated with SLAM. This algorithm systematically identifies unexplored regions, guiding the robot to autonomously create a comprehensive map of the environment. This capability is pivotal for applications in search and rescue, warehouse automation, and beyond.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                   
-            </div>        
+    <!-- Page Header -->
+    <section style="padding: 6rem 2rem 3rem; text-align: center;">
+        <div class="container">
+            <h1 class="section-title">All My Projects</h1>
+            <p class="section-subtitle">A comprehensive showcase of my robotics and AI applications</p>
         </div>
-    </div>                              
-                
-    <hr>
+    </section>
 
-        
-    <!-- Publications -->   
-
-    <div id="Publications" class=" vansh page clearfix ">
+    <!-- Projects List -->
+    <section id="projects" class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10  col-md-offset-1">
-                    <div class="build title-page">
-                        <h2 class="text-center">Robotic Arm Control using RL</h2>   
-                            <div class="line-title bg-primary"></div>
+            <!-- Project 1: AMR -->
+            <div id="amr" class="project-detail-section">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/exploration_with_SLAM.gif" alt="Autonomous Mobile Robot">
                     </div>
-                </div>
-            </div>
-
-            <!-- <br>
-        </div> -->
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="folio-img">
-                        <div class="portfolio-item ">
-                            <div class="thumbnail">
-                                <div class="thumb-img">
-                                    <div class="link-attr">
-                                        <a href="project_videos/ppo_control.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Robotic Arm Control using PPO" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                        <a href="https://drive.google.com/drive/folders/1ulxyEq9TrHebLHWSMPrCohj_ecztCL6W?usp=drive_link" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                    </div>
-                                    <img class="linear img-portfolio img-responsive" src="project_videos/ppo_control.gif" alt="Control using PPO">
-                                    
-                                    <div class="folio-caption">
-                                        <i class="fa fa-caret-up"></i>
-                                            <p>Arm Control using PPO</p>
-                                    </div>
-                                </div>
-                            </div>                  
+                    <div>
+                        <h2>Autonomous Mobile Robot for Exploration</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-map"></i>
+                                <strong>Domain:</strong> SLAM & Perception
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Research
+                            </div>
                         </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A comprehensive exploration system for autonomous mobile robots featuring advanced perception and localization.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="folio-img">
-                        <div class="portfolio-item ">
-                            <div class="thumbnail">
-                                <div class="thumb-img">
-                                    <div class="link-attr">
-                                        <a href="project_videos/tensorboard.png" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Tensor Board" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                        <a href="https://drive.google.com/file/d/183GkMLeRgYdQamwwaKxzrGnFWH1l4TAK/view?usp=drive_link" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                    </div>
-                                    <img class="linear img-portfolio img-responsive" src="project_videos/tensorboard.png" alt="Control using PPO">
-                                    
-                                    <div class="folio-caption">
-                                        <i class="fa fa-caret-up"></i>
-                                            <p>Tensor Board</p>
-                                    </div>
-                                </div>
-                            </div>                  
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>Pose Graph SLAM</h4>
+                        <p>Developed robust pose graph optimization leveraging 2D LiDAR sensor data for accurate mapping and localization.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--secondary-color);">
+                        <h4>AMCL Localization</h4>
+                        <p>Implemented Adaptive Monte Carlo Localization to achieve precise robot positioning within mapped environments.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>Visual SLAM</h4>
+                        <p>Integrated RTAB-MAP for real-time camera-based SLAM and high-quality point cloud generation.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Frontier Exploration</h4>
+                        <p>Implemented autonomous frontier-based exploration algorithm for complete environmental mapping.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> ROS, Gazebo, LiDAR, OpenCV, Point Cloud Library (PCL), RTAB-MAP</p>
+                    <p><strong>Key Algorithms:</strong> Pose Graph Optimization, AMCL, D-SLAM, Frontier-based Planning</p>
+                    <p><strong>Applications:</strong> Search & Rescue, Warehouse Automation, Autonomous Exploration</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://drive.google.com/file/d/1DD0H-BVEMmdUuLSpQfhHepFC0PGzrcRA/view?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fas fa-video"></i> View Demonstration
+                    </a>
+                    <a href="https://drive.google.com/file/d/1I6OQ4_POMecz628fAwv89gMY38H4g3_7/view" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fas fa-image"></i> View Point Cloud
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: RL Arm -->
+            <div id="rl" class="project-detail-section">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/ppo_control.gif" alt="Robotic Arm RL">
+                    </div>
+                    <div>
+                        <h2>Robotic Arm Control with Reinforcement Learning</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-brain"></i>
+                                <strong>Domain:</strong> Reinforcement Learning
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Machine Learning
+                            </div>
                         </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            An advanced RL system for learning complex robotic manipulation tasks using policy gradient methods.
+                        </p>
                     </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>PPO Algorithm</h4>
+                        <p>Implemented Proximal Policy Optimization for stable and efficient policy learning in continuous control tasks.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--secondary-color);">
+                        <h4>Gazebo Simulation</h4>
+                        <p>Built realistic simulation environment for robotic arm training with accurate physics and sensor modeling.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>TensorBoard Monitoring</h4>
+                        <p>Comprehensive training visualization and performance analysis with TensorFlow integration.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> Python, TensorFlow, OpenAI Baselines, Gazebo, ROS</p>
+                    <p><strong>Algorithm:</strong> Proximal Policy Optimization (PPO) with continuous action space</p>
+                    <p><strong>Training:</strong> Multi-step trajectory collection, advantage estimation, policy update</p>
+                    <p><strong>Applications:</strong> Robot manipulation, task learning, autonomous control</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://drive.google.com/drive/folders/1ulxyEq9TrHebLHWSMPrCohj_ecztCL6W?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fas fa-folder"></i> View Results
+                    </a>
+                    <a href="https://drive.google.com/file/d/183GkMLeRgYdQamwwaKxzrGnFWH1l4TAK/view?usp=drive_link" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fas fa-chart-line"></i> TensorBoard
+                    </a>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-11">
-                    <div class="about-content">
-                        <ul>
-                            <br>
-                            <h4><b>Reinforcement Learning for Robotic Arm Control</b></h4>
-                                In this project, I trained an RL agent for control of a robotic arm using the Proximal Policy Optimization (PPO) algorithm. The simulation environment was developed using Gazebo, where the robotic arm learned to perform tasks through iterative training. OpenAI's Baselines repository was utilized to implement the PPO algorithm, ensuring efficient and reliable training. To monitor the training progress and analyze key performance metrics, I employed TensorBoard, which provided insightful visualizations of the learning process. This project highlights my ability to integrate simulation tools, advanced machine learning algorithms, and data visualization for robotic system development.
-                        </ul>
+            <!-- Project 3: Weeding Robot -->
+            <div id="weeding" class="project-detail-section">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/Weed_killing_robot.gif" alt="Weeding Robot">
                     </div>
-                </div>
-            </div>
-        </div> <!-- end container -->
-    </div>
-
-    <!-- ProjectList -->
-    <div id="#WeedingRobot" class="page clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10  col-md-offset-1">
-                    <div class="build title-page">
-                        <h2 class="text-center">Autonomous Weeding Robot</h2>   
-                        <div class="line-title bg-primary"></div>
-                    </div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="folio-img">
-                        <div class="portfolio-item">
-                            <div class="thumbnail">
-                                <div class="thumb-img">
-                                    <div class="link-attr">
-                                        <a href="project_videos/Weed_killing_robot.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Week Killing Robot" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                        <a href="https://github.com/vanshraisaini/Autonomous_Weeding_Robot" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                    </div>
-                                    <img class="linear img-portfolio img-responsive" src="project_videos/Weed_killing_robot.gif" alt="Weed Killing Robot">
-                                    
-                                    <div class="folio-caption">
-                                        <i class="fa fa-caret-up"></i>
-                                            <p>Autonomous Weeding Robot</p>
-                                    </div>
-                                </div>
-                            </div>                  
+                    <div>
+                        <h2>Autonomous Weeding Robot</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-leaf"></i>
+                                <strong>Domain:</strong> Computer Vision
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Embedded Systems
+                            </div>
                         </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A fully autonomous agricultural robot that detects and eliminates weeds using deep learning.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="about-content">
-                        <ul>
-                            <h4><b>Cotton Plant and Weed detection</b></h4>
-                            <li>This project involved developing an autonomous robot to differentiate and eliminate weeds from cotton plants. Using YOLOv5 with transfer learning on a custom dataset,we trained a neural network model and deployed it on a Raspberry Pi 4 for real-time weed detection.</li> 
-                            <li>To enhance navigation accuracy, we fused IMU data with motor encoders for improved odometry and implemented PID control for precise movement. </li>
-                            <li>Additionally, we designed and assembled the mechanical and electrical subsystems, creating a fully functional prototype. </li>
-                        </ul>
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>YOLOv5 Detection</h4>
+                        <p>Transfer learning on custom cotton/weed dataset for real-time plant classification and detection.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--secondary-color);">
+                        <h4>Embedded Deployment</h4>
+                        <p>Optimized model deployment on Raspberry Pi 4 for real-time inference at field speeds.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>Sensor Fusion</h4>
+                        <p>IMU and encoder data fusion with PID control for accurate navigation and positioning.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Mechanical Design</h4>
+                        <p>Complete robot design from CAD to assembly including actuation for weed removal.</p>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="folio-img">
-                        <div class="portfolio-item">
-                            <div class="thumbnail">
-                                <div class="thumb-img">
-                                    <div class="link-attr">
-                                        <a href="project_videos/cotton_vs_weed_yolov5.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Cotton Plant and Weed detection" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                        <a href="https://github.com/vanshraisaini/Autonomous_Weeding_Robot" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                    </div>
-                                    <img class="linear img-portfolio img-responsive" src="project_videos/cotton_vs_weed_yolov5.gif" alt="Weed Killing Robot">
-                                    
-                                    <div class="folio-caption">
-                                        <i class="fa fa-caret-up"></i>
-                                            <p>Cotton and Weed detection using YOLOv5</p>
-                                    </div>
-                                </div>
-                            </div>                  
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> Python, YOLOv5, TensorFlow, OpenCV, Raspberry Pi 4, Arduino</p>
+                    <p><strong>Computer Vision:</strong> Custom dataset creation, transfer learning, real-time inference</p>
+                    <p><strong>Control:</strong> PID control loops, sensor fusion, odometry estimation</p>
+                    <p><strong>Applications:</strong> Precision agriculture, crop management, autonomous farming</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://github.com/vanshraisaini/Autonomous_Weeding_Robot" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                    <a href="project_videos/cottonVSweed.jpg" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fas fa-image"></i> Detection Results
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: Quadruped -->
+            <div id="quadruped" class="project-detail-section">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/spot_micro.gif" alt="Quadruped Robot">
+                    </div>
+                    <div>
+                        <h2>Quadruped Robot Development</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-robot"></i>
+                                <strong>Domain:</strong> Robotics
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Hardware & Software
+                            </div>
                         </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A 12-DoF quadruped robot developed at IIT Jammu inspired by MIT's Cheetah Micro.
+                        </p>
                     </div>
                 </div>
 
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Contributions</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>CAD Design & FEA</h4>
+                        <p>Custom mechanical design with finite element analysis for structural optimization and durability.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--secondary-color);">
+                        <h4>3D Printing & Assembly</h4>
+                        <p>Prototype development using 3D printing with iterative design refinement for functional components.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>Powertrain Design</h4>
+                        <p>Motor selection, gearing, and drive train engineering for quadrupedal locomotion.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Autonomous Navigation</h4>
+                        <p>IMU integration, ROS navigation stack, and autonomous path planning implementation.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Specifications:</strong> 12-DOF quadruped, inspired by MIT Cheetah Micro</p>
+                    <p><strong>Hardware:</strong> Custom 3D printed chassis, servo motors, IMU, encoders, Raspberry Pi controller</p>
+                    <p><strong>Software:</strong> ROS, Gazebo simulation, navigation stack, custom gait controllers</p>
+                    <p><strong>Applications:</strong> Legged locomotion research, terrain adaptation, autonomous navigation</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://drive.google.com/drive/folders/1kVDW40q_0N26MbIiNQepIZcnxZuUiSto?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fas fa-folder"></i> Project Resources
+                    </a>
+                </div>
             </div>
-        </div> <!--end container-->
-    </div>
-
-
-    <!-- Quadruped -->   
-
-    <div id="Quadruped" class="page clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10  col-md-offset-1">
-                    <div class="build title-page">
-                        <h2 class="text-center">Quadruped</h2>  
-                            <div class="line-title bg-primary"></div>
-                    </div>
-                </div>
-              <!-- end col -->
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="folio-img">
-                        <div class="portfolio-item">
-                            <div class="thumbnail">
-                                <div class="thumb-img">
-                                    <div class="link-attr">
-                                        <a href="project_videos/spot_micro.gif" data-gallery="global-gallery" data-parent="" data-toggle="lightbox" data-title="Quadruped" class="link-search animated linear"><i class="fa fa-search"></i></a>
-                                        <a href="https://drive.google.com/drive/folders/1kVDW40q_0N26MbIiNQepIZcnxZuUiSto?usp=drive_link" class="link-chain animated linear"><i class="fa  fa-chain"></i></a>
-                                    </div>
-                                    <img class="linear img-portfolio img-responsive" src="project_videos/spot_micro.gif" alt="Quadruped">
-                                    
-                                    <div class="folio-caption">
-                                        <i class="fa fa-caret-up"></i>
-                                            <p>Quadruped</p>
-                                    </div>
-                                </div>
-                            </div>                  
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-5">
-                    <div class="about-content">
-                        <br>
-                        <ul>
-                            <h4><b>IIT Jammu's Quadruped</b></h4>
-                            <li>At IIT Jammu, I contributed to the development of an in-house 12-DoF quadruped robot inspired by MIT's Cheetah Micro.</li>
-                            <li>My responsibilities included custom CAD design, FEA analysis, 3D printing prototypes, powertrain design, and Gazebo simulation.</li> 
-                            <li>Our team also integrated IMU data using Arduino and implemented the ROS navigation stack to enable autonomous navigation.</li>
-                    </div>
-                </div>
-
-
-            </div>
-            
         </div>
-        
-    </div>
+    </section>
 
+    <hr style="margin: 4rem 0;">
 
-</div>
-
-    <!--contact-->
-    <div id="contact" class="page page-bgcolor">
+    <!-- Back to Home -->
+    <section style="padding: 4rem 0; text-align: center;">
         <div class="container">
-        <div class="row">
-          <div class="col-md-10  col-md-offset-1">
-            <div class="build title-page">
-                <h2 class="text-center">GET IN TOUCH</h2>   
-                <div class="line-title bg-primary"></div>
-            </div>
-           </div><!-- end col -->
-        </div><!-- end row -->
-        <div class="row">
-            <div class="col-md-7 ">
-                <div class="build contact clearfix text-center">
-                    <span class="fa fa-linkedin"></span>
-                        <p>Vansh Rai Saini <br/>Robotics Engineer<p>
-                </div>          
-            </div><!-- end col -->      
-            <div class="col-md-3 ">
-                <div class="build contact clearfix text-center">
-                    <span class="fa fa-envelope"></span>
-                    <p>vansh.rai.saini@gmail.com</p>
-                </div>
-            </div>
-        </div><!-- end row -->
-    
-      </div><!-- end container -->
-    </div>
-    <!--contact-->
-    
+            <h3 style="margin-bottom: 2rem;">Want to learn more?</h3>
+            <a href="index.html" class="btn-primary" style="display: inline-block;">Back to Home</a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-black">
-      <div class="container">
-        <div class="row">
-            <div class="col-md-7 text-right">
-        
-            <ul class="list-inline">
-            <li><a href="https://github.com/vanshraisaini" class="socIcon color-primary linear"><i class="fa fa-github fa-2x"></i></a></li>
-            <li><a href="https://in.linkedin.com/in/vanshraisaini" class="socIcon color-primary linear"><i class="fa fa-linkedin fa-2x"></i></a></li>
-            </ul>
-        
-            </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vansh Rai Saini. All rights reserved.</p>
+            <p>Built with passion for robotics and clean code.</p>
         </div>
-      </div>
     </footer>
-    <!-- /Footer -->
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.sticky.js" ></script>
-     <script src="js/jquery.nav.js"></script>
-    <script src="js/jquery.scrollTo.js" ></script>
-    <script src="js/jquery.flexslider.js" ></script>
-   <script type="text/javascript" src="js/ekko-lightbox.js"></script>
-   <script src="js/jquery.easing.1.3.js" ></script>
-   <script src="js/jquery.shuffle.js" ></script>
-    <script src="js/script.js"></script>
-
-    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
-
-    <!-- <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'G-VVWJ7K9WFV', 'auto');
-      ga('send', 'pageview');
-    </script> -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVWJ7K9WFV"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VVWJ7K9WFV');
-    </script>
-
-  </div>
-  </body>
+    <!-- Bootstrap for responsive design -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
+    
