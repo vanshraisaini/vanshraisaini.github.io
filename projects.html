@@ -136,14 +136,14 @@
             <!-- Filter Section -->
             <div class="filter-section">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="perception">Perception</button>
+                <button class="filter-btn" data-filter="perception">Perception/SLAM</button>
                 <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
                 <button class="filter-btn" data-filter="reinforcement-learning">Reinforcement Learning</button>
                 <button class="filter-btn" data-filter="control">Control</button>
             </div>
 
             <!-- Project 1: AMR -->
-            <div id="amr" class="project-detail-section" data-categories="perception,computer-vision">
+            <div id="amr" class="project-detail-section" data-categories="perception">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/exploration_with_SLAM.gif" alt="Autonomous Mobile Robot">
@@ -176,10 +176,6 @@
                         <h4>AMCL Localization</h4>
                         <p>Implemented Adaptive Monte Carlo Localization to achieve precise robot positioning within mapped environments.</p>
                     </div>
-                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
-                        <h4>Visual SLAM</h4>
-                        <p>Integrated RTAB-MAP for real-time camera-based SLAM and high-quality point cloud generation.</p>
-                    </div>
                     <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
                         <h4>Frontier Exploration</h4>
                         <p>Implemented autonomous frontier-based exploration algorithm for complete environmental mapping.</p>
@@ -188,7 +184,7 @@
 
                 <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
                 <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
-                    <p><strong>Technologies:</strong> ROS, Gazebo, LiDAR, OpenCV, Point Cloud Library (PCL), RTAB-MAP</p>
+                    <p><strong>Technologies:</strong> ROS2, Gazebo, LiDAR, Point Cloud Library (PCL)</p>
                     <p><strong>Key Algorithms:</strong> Pose Graph Optimization, AMCL, D-SLAM, Frontier-based Planning</p>
                     <p><strong>Applications:</strong> Search & Rescue, Warehouse Automation, Autonomous Exploration</p>
                 </div>
@@ -196,9 +192,6 @@
                 <div style="margin-top: 2rem;">
                     <a href="https://drive.google.com/file/d/1DD0H-BVEMmdUuLSpQfhHepFC0PGzrcRA/view?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
                         <i class="fas fa-video"></i> View Demonstration
-                    </a>
-                    <a href="https://drive.google.com/file/d/1I6OQ4_POMecz628fAwv89gMY38H4g3_7/view" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
-                        <i class="fas fa-image"></i> View Point Cloud
                     </a>
                 </div>
             </div>
@@ -261,8 +254,65 @@
                 </div>
             </div>
 
-            <!-- Project 3: Weeding Robot -->
-            <div id="weeding" class="project-detail-section" data-categories="computer-vision,control,perception">
+            <!-- Project 3: Visual SLAM with RTAB-MAP -->
+            <div id="visual-slam" class="project-detail-section" data-categories="perception,computer-vision">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/point_cloud.jpg" alt="Visual SLAM Point Cloud">
+                    </div>
+                    <div>
+                        <h2>Visual SLAM with RTAB-MAP</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-cube"></i>
+                                <strong>Domain:</strong> Visual SLAM & Mapping
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Perception System
+                            </div>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A real-time visual SLAM system using RTAB-MAP for simultaneous localization and mapping with RGB-D sensors.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>RTAB-MAP Algorithm</h4>
+                        <p>Implemented Real-Time Appearance-Based Mapping for online visual SLAM with points clouds and loop closure detection.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>RGB-D Sensor Integration</h4>
+                        <p>Integrated depth camera sensors with visual odometry for accurate environmental perception.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Loop Closure Detection</h4>
+                        <p>Implemented appearance-based loop closure detection to optimize maps and eliminate drift.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> ROS, RTAB-MAP, OpenCV, Point Cloud Library (PCL), RGB-D Sensors</p>
+                    <p><strong>Key Algorithms:</strong> Visual Odometry, Loop Closure Detection, Graph Optimization</p>
+                    <p><strong>Applications:</strong> 3D Mapping, Indoor Navigation, Environmental Reconstruction, Robotic Exploration</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://drive.google.com/file/d/1I6OQ4_POMecz628fAwv89gMY38H4g3_7/view?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fas fa-image"></i> View Demonstration
+                    </a>
+                    <a href="https://github.com/introlab/rtabmap" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fab fa-github"></i> RTAB-MAP Repository
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: Weeding Robot -->
+            <div id="weeding" class="project-detail-section" data-categories="computer-vision,control">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/Weed_killing_robot.gif" alt="Weeding Robot">
@@ -323,8 +373,8 @@
                 </div>
             </div>
 
-            <!-- Project 4: Quadruped -->
-            <div id="quadruped" class="project-detail-section" data-categories="perception,control">
+            <!-- Project 5: Quadruped -->
+            <div id="quadruped" class="project-detail-section" data-categories="control">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/spot_micro.gif" alt="Quadruped Robot">
