@@ -59,10 +59,24 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color) !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .collapse.navbar-collapse {
+  display: flex !important;
+  width: auto;
+  margin-left: auto;
 }
 
 .navbar-brand {
@@ -73,9 +87,25 @@ body {
   letter-spacing: 2px;
 }
 
+.navbar-brand::after {
+  content: '';
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none !important;
+  gap: 0;
+}
+
+.navbar-nav li {
+  list-style: none !important;
+}
+
 .navbar-nav li a {
   color: var(--text-secondary) !important;
-  font-weight: 500;
+  font-weight: 700;
+  text-decoration: none !important;
   transition: all 0.3s ease;
   position: relative;
   margin: 0 1rem;
