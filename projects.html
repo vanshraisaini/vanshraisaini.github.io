@@ -215,7 +215,7 @@
                             </div>
                         </div>
                         <p style="font-size: 1.1rem; color: var(--text-secondary);">
-                            An advanced RL system for learning complex robotic manipulation tasks using policy gradient methods.
+                            RL system for learning complex robotic manipulation tasks using policy gradient methods.
                         </p>
                     </div>
                 </div>
@@ -428,6 +428,64 @@
                 <div style="margin-top: 2rem;">
                     <a href="https://drive.google.com/drive/folders/1kVDW40q_0N26MbIiNQepIZcnxZuUiSto?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem;">
                         <i class="fas fa-folder"></i> Project Resources
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 6: Flappy Bird DQN -->
+            <div id="flappy-bird-dqn" class="project-detail-section" data-categories="reinforcement-learning,control">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/Flappy_bird_trained.gif" alt="Flappy Bird DQN Agent" style="border-radius: 12px; border: 2px solid var(--border-color);">
+                    </div>
+                    <div>
+                        <h2>Flappy Bird Agent with DQN</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-brain"></i>
+                                <strong>Domain:</strong> Deep Reinforcement Learning
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Machine Learning
+                            </div>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A reinforcement learning agent trained from scratch using Deep Q-Network to master the Flappy Bird game with pixel-level input.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>DQN Algorithm</h4>
+                        <p>Implemented Deep Q-Network from scratch with experience replay and target network for stable learning.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>Experience Replay</h4>
+                        <p>Implemented experience replay buffer for decorrelated training and improved sample efficiency.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Epsilon-Greedy Exploration</h4>
+                        <p>Balanced exploration and exploitation with epsilon-greedy strategy for effective learning.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> Python, TensorFlow, PyTorch, Pygame (Flappy Bird environment)</p>
+                    <p><strong>Architecture:</strong> Neural network with 3 layers for Q-value approximation</p>
+                    <p><strong>Training:</strong> Experience replay buffer, target network, Adam optimizer, epsilon decay</p>
+                    <p><strong>Results:</strong> Agent learns to achieve superhuman performance with learned pixel-to-action mapping</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="project_videos/Flappy_bird_trained.mp4" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fas fa-video"></i> Watch Training Result
+                    </a>
+                    <a href="https://github.com/vanshraisaini/cse250a-final-project" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fab fa-github"></i> View Github
                     </a>
                 </div>
             </div>
