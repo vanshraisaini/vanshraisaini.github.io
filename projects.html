@@ -15,9 +15,45 @@
     <link href="css/modern.css" rel="stylesheet">
 
     <style>
+        .filter-section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: #000000;
+        }
+
         .project-detail-section {
             padding: 4rem 0;
             border-bottom: 1px solid var(--border-color);
+            transition: opacity 0.3s ease, display 0.3s ease;
+        }
+
+        .project-detail-section.hidden {
+            display: none;
         }
 
         .project-detail-header {
@@ -97,8 +133,17 @@
     <!-- Projects List -->
     <section id="projects" class="section">
         <div class="container">
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="perception">Perception/SLAM</button>
+                <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+                <button class="filter-btn" data-filter="reinforcement-learning">Reinforcement Learning</button>
+                <button class="filter-btn" data-filter="control">Control</button>
+            </div>
+
             <!-- Project 1: AMR -->
-            <div id="amr" class="project-detail-section">
+            <div id="amr" class="project-detail-section" data-categories="perception">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/exploration_with_SLAM.gif" alt="Autonomous Mobile Robot">
@@ -131,10 +176,6 @@
                         <h4>AMCL Localization</h4>
                         <p>Implemented Adaptive Monte Carlo Localization to achieve precise robot positioning within mapped environments.</p>
                     </div>
-                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
-                        <h4>Visual SLAM</h4>
-                        <p>Integrated RTAB-MAP for real-time camera-based SLAM and high-quality point cloud generation.</p>
-                    </div>
                     <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
                         <h4>Frontier Exploration</h4>
                         <p>Implemented autonomous frontier-based exploration algorithm for complete environmental mapping.</p>
@@ -143,7 +184,7 @@
 
                 <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
                 <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
-                    <p><strong>Technologies:</strong> ROS, Gazebo, LiDAR, OpenCV, Point Cloud Library (PCL), RTAB-MAP</p>
+                    <p><strong>Technologies:</strong> ROS2, Gazebo, LiDAR, Point Cloud Library (PCL)</p>
                     <p><strong>Key Algorithms:</strong> Pose Graph Optimization, AMCL, D-SLAM, Frontier-based Planning</p>
                     <p><strong>Applications:</strong> Search & Rescue, Warehouse Automation, Autonomous Exploration</p>
                 </div>
@@ -152,14 +193,11 @@
                     <a href="https://drive.google.com/file/d/1DD0H-BVEMmdUuLSpQfhHepFC0PGzrcRA/view?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
                         <i class="fas fa-video"></i> View Demonstration
                     </a>
-                    <a href="https://drive.google.com/file/d/1I6OQ4_POMecz628fAwv89gMY38H4g3_7/view" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
-                        <i class="fas fa-image"></i> View Point Cloud
-                    </a>
                 </div>
             </div>
 
             <!-- Project 2: RL Arm -->
-            <div id="rl" class="project-detail-section">
+            <div id="rl" class="project-detail-section" data-categories="reinforcement-learning,control">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/ppo_control.gif" alt="Robotic Arm RL">
@@ -177,7 +215,7 @@
                             </div>
                         </div>
                         <p style="font-size: 1.1rem; color: var(--text-secondary);">
-                            An advanced RL system for learning complex robotic manipulation tasks using policy gradient methods.
+                            RL system for learning complex robotic manipulation tasks using policy gradient methods.
                         </p>
                     </div>
                 </div>
@@ -216,8 +254,120 @@
                 </div>
             </div>
 
-            <!-- Project 3: Weeding Robot -->
-            <div id="weeding" class="project-detail-section">
+            <!-- Project 3: Visual SLAM with RTAB-MAP -->
+            <div id="visual-slam" class="project-detail-section" data-categories="perception,computer-vision">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/point_cloud.jpg" alt="Visual SLAM Point Cloud">
+                    </div>
+                    <div>
+                        <h2>Visual SLAM with RTAB-MAP</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-cube"></i>
+                                <strong>Domain:</strong> Visual SLAM & Mapping
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Perception System
+                            </div>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A real-time visual SLAM system using RTAB-MAP for simultaneous localization and mapping with RGB-D sensors.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>RTAB-MAP Algorithm</h4>
+                        <p>Implemented Real-Time Appearance-Based Mapping for online visual SLAM with points clouds and loop closure detection.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>RGB-D Sensor Integration</h4>
+                        <p>Integrated depth camera sensors with visual odometry for accurate environmental perception.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Loop Closure Detection</h4>
+                        <p>Implemented appearance-based loop closure detection to optimize maps and eliminate drift.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> ROS, RTAB-MAP, OpenCV, Point Cloud Library (PCL), RGB-D Sensors</p>
+                    <p><strong>Key Algorithms:</strong> Visual Odometry, Loop Closure Detection, Graph Optimization</p>
+                    <p><strong>Applications:</strong> 3D Mapping, Indoor Navigation, Environmental Reconstruction, Robotic Exploration</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://drive.google.com/file/d/1I6OQ4_POMecz628fAwv89gMY38H4g3_7/view?usp=drive_link" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fas fa-image"></i> View Demonstration
+                    </a>
+                    <a href="https://github.com/introlab/rtabmap" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fab fa-github"></i> RTAB-MAP Repository
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: Multi-Robot Fleet Management -->
+            <div id="unbox-robotics" class="project-detail-section" data-categories="control">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/unbox.gif" alt="Multi-Robot Fleet Management" style="max-width: 200px; margin: 0 auto;">
+                    </div>
+                    <div>
+                        <h2>Multi-Robot Fleet Management System</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-tasks"></i>
+                                <strong>Domain:</strong> Autonomy & Fleet Control
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-industry"></i>
+                                <strong>Type:</strong> Production System
+                            </div>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A robust production-grade fleet management system for autonomous mobile robots with intelligent task planning and resource optimization at Unbox Robotics.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>Multi-Cycle Deadlock Avoidance</h4>
+                        <p>Developed algorithms to detect and prevent deadlocks in multi-robot systems navigating constrained spaces with sophisticated conflict resolution.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--secondary-color);">
+                        <h4>Traffic-Aware Path Planning</h4>
+                        <p>Implemented dynamic path planning that considers real-time traffic patterns and optimizes routes for efficient fleet coordination and minimal congestion.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>State Machine High-Level Control</h4>
+                        <p>Designed robust state machine architecture for high-level task control with smooth state transitions and failure recovery mechanisms.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> ROS, Behavior Trees, State Machine patterns, Fleet coordination, Power management</p>
+                    <p><strong>Architecture:</strong> Distributed multi-robot task planning, real-time decision making, resource optimization</p>
+                    <p><strong>Focus Areas:</strong> Production reliability, throughput optimization, system scalability</p>
+                    <p><strong>Impact:</strong> Enabling reliable autonomous fleet operations for warehouse and logistics applications</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://www.unboxrobotics.com/" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fas fa-globe"></i> Unbox Robotics
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: Weeding Robot -->
+            <div id="weeding" class="project-detail-section" data-categories="computer-vision,control">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/Weed_killing_robot.gif" alt="Weeding Robot">
@@ -278,8 +428,8 @@
                 </div>
             </div>
 
-            <!-- Project 4: Quadruped -->
-            <div id="quadruped" class="project-detail-section">
+            <!-- Project 6: Quadruped -->
+            <div id="quadruped" class="project-detail-section" data-categories="control">
                 <div class="project-detail-header">
                     <div>
                         <img src="project_videos/spot_micro.gif" alt="Quadruped Robot">
@@ -336,6 +486,64 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Project 7: Flappy Bird DQN -->
+            <div id="flappy-bird-dqn" class="project-detail-section" data-categories="reinforcement-learning,control">
+                <div class="project-detail-header">
+                    <div>
+                        <img src="project_videos/Flappy_bird_trained.gif" alt="Flappy Bird DQN Agent" style="border-radius: 12px; border: 2px solid var(--border-color);">
+                    </div>
+                    <div>
+                        <h2>Flappy Bird Agent with DQN</h2>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-brain"></i>
+                                <strong>Domain:</strong> Deep Reinforcement Learning
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-flask"></i>
+                                <strong>Type:</strong> Machine Learning
+                            </div>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                            A reinforcement learning agent trained from scratch using Deep Q-Network to master the Flappy Bird game with pixel-level input.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Key Components</h3>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+                    <div class="skill-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4>DQN Algorithm</h4>
+                        <p>Implemented Deep Q-Network from scratch with experience replay and target network for stable learning.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--success-color);">
+                        <h4>Experience Replay</h4>
+                        <p>Implemented experience replay buffer for decorrelated training and improved sample efficiency.</p>
+                    </div>
+                    <div class="skill-card" style="border-left: 4px solid var(--accent-color);">
+                        <h4>Epsilon-Greedy Exploration</h4>
+                        <p>Balanced exploration and exploitation with epsilon-greedy strategy for effective learning.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">Technical Details</h3>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <p><strong>Technologies:</strong> Python, TensorFlow, PyTorch, Pygame (Flappy Bird environment)</p>
+                    <p><strong>Architecture:</strong> Neural network with 3 layers for Q-value approximation</p>
+                    <p><strong>Training:</strong> Experience replay buffer, target network, Adam optimizer, epsilon decay</p>
+                    <p><strong>Results:</strong> Agent learns to achieve superhuman performance with learned pixel-to-action mapping</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="project_videos/Flappy_bird_trained.mp4" target="_blank" class="link-btn" style="display: inline-block; padding: 0.8rem 1.5rem; margin-right: 1rem;">
+                        <i class="fas fa-video"></i> Watch Training Result
+                    </a>
+                    <a href="https://github.com/vanshraisaini/cse250a-final-project" target="_blank" class="link-btn secondary" style="display: inline-block; padding: 0.8rem 1.5rem;">
+                        <i class="fab fa-github"></i> View Github
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -359,7 +567,34 @@
 
     <!-- Bootstrap for responsive design -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const selectedFilter = this.getAttribute('data-filter');
+
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Filter projects
+                document.querySelectorAll('.project-detail-section').forEach(project => {
+                    if (selectedFilter === 'all') {
+                        project.classList.remove('hidden');
+                    } else {
+                        const categories = project.getAttribute('data-categories').split(',');
+                        if (categories.includes(selectedFilter)) {
+                            project.classList.remove('hidden');
+                        } else {
+                            project.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script></body>
 
 </html>
     
